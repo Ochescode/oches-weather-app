@@ -75,4 +75,10 @@ cityForm.addEventListener('submit', e => {
   
 });
 
+// setting condition to update app with local storage 
+if(localStorage.getItem('city')){
+  updateCity(localStorage.getItem('city'))
+  .then(data => updateUI(data))
+  .catch(err => console.log(err));
+};
 
